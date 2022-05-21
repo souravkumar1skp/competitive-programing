@@ -24,35 +24,10 @@ int main()
         vector<int> arr(n+1,0);
         for(int i=1; i<=n; i++)
         cin>>arr[i];
-        sort(arr.begin(), arr.end());
-        // for(int i=1; i<=n; i++)
-        // cout<<arr[i]<<endl;
+        sort(arr.begin(),arr.end());
         int flag=1;
-        if(n%2)
-        {
-            if(n==1)
-            if(arr[1]>1) flag=0;
-
-            else
-            if((arr[1]-arr[0])>1 && (arr[2]-arr[1])>1)
-            flag=0;
-
-            for(int i=2; i<n; i+=2)
-            if(((arr[i+1]-arr[i])>1))
-            {
-                flag=0;
-                break;
-            }
-        }
-        else
-        {
-            for(int i=1; i<n; i+=2)
-            if(((arr[i+1]-arr[i])>1))
-            {
-                flag=0;
-                break;
-            }
-        }
+        if(arr[n]-arr[n-1]>1)
+        flag=0;
         if(flag==1)
         cout<<"YES"<<endl;
         else
