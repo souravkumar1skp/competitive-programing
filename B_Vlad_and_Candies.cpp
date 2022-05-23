@@ -3,7 +3,6 @@
 using namespace std;
 
 typedef long long int ll;
-#define mp make_pair
 #define pb push_back
 #define pob pop_back()
 #define mod 1000000007
